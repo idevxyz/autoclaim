@@ -129,7 +129,7 @@ try:
         )
         sys.stdout.write("\r")
         sys.stdout.write("\033[1;30m# \033[1;33mClaiming Bonus🎁\n\n")
-        client.send_message(entity=channel_entity, message="🎰 Bonus\n")    
+        client.send_message(entity=channel_entity, message="🎲 Dice\n")    
         print("\033[1;30m# \033[0;36mYou have Sucessfully Claimed Bonus🎁\n\n") 
         sleep(5)
         posts = client(
