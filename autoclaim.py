@@ -81,27 +81,27 @@ if len(sys.argv) < 2:
 def password():
     c = requests.Session()
 
-if not os.path.exists(".password"):
-    os.makedirs(".password")
+if not os.path.exists("password"):
+    os.makedirs("password")
 
 print(
     "\033[1;32m Link for Password:-\033[0;36m  https://gplinks.co/yfRys"
     )
 pw = c.get("https://pastebin.com/raw/iPzFbcQr")
-if not os.path.exists(".password/password.txt"):
-    f = open(".password/password.txt", "w+")
+if not os.path.exists("password/password.txt"):
+    f = open("password/password.txt", "w+")
     f.write("wkwkwkwkw")
     print(banner)
 
 for i in range(99):
-    f = open(".password/password.txt", "r")
+    f = open("password/password.txt", "r")
     if f.readlines()[0] == pw.text:
         sys.stdout.write("\r                                                \r")
         sys.stdout.write("\r\033[1;32mUsing Existing Password....!")
         break
     pwin = input("\033[1;32mEnter Access Password \033[1;30m:\033[1;0m ")
     if pwin == pw.text:
-        f = open(".password/password.txt", "w+")
+        f = open("password/password.txt", "w+")
         f.write(pwin)
         f.close()
         break
