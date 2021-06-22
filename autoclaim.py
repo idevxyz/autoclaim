@@ -45,7 +45,6 @@ for i in range(5000000):
         sleep(2)
         os.system("clear")
         break
-os.system("termux-open-url  https://youtube.com/channel/UC3fHZuhmvtEFpW5h_ia0hCg ")
 
 
 banner = """\033[0;35m   
@@ -74,50 +73,10 @@ if not os.path.exists('session'):
      os.makedirs('session')
 print(banner)
 if len(sys.argv) < 2:
-    print("\n\n\n\033[1;32mUsage : python dogeup.py  Your no. with country code")
+    print("\n\n\n\033[1;32mUsage : python autoclaim.py  Your no. with country code")
     sys.exit(1)
 
     
-def password():
-    c = requests.Session()
-
-if not os.path.exists("password"):
-    os.makedirs("password")
-
-print(
-    "\033[1;32m Link for Password:-\033[0;36m  https://gplinks.co/yfRys"
-    )
-pw = c.get("https://pastebin.com/raw/iPzFbcQr")
-if not os.path.exists("password/password.txt"):
-    f = open("password/password.txt", "w+")
-    f.write("wkwkwkwkw")
-    print(banner)
-
-for i in range(99):
-    f = open("password/password.txt", "r")
-    if f.readlines()[0] == pw.text:
-        sys.stdout.write("\r                                                \r")
-        sys.stdout.write("\r\033[1;32mUsing Existing Password....!")
-        break
-    pwin = input("\033[1;32mEnter Access Password \033[1;30m:\033[1;0m ")
-    if pwin == pw.text:
-        f = open("password/password.txt", "w+")
-        f.write(pwin)
-        f.close()
-        break
-    else:
-        print("\033[1;31m Password Incorrect. ❌")
-        if i > 1:
-            print(
-                "\033[1;33m Please Visit above link to get password !V\n\033[1;0mhttp://jejakainc.com/Password/"
-            )
-            sys.exit()
-
-
-
-
-def OpenLink(link): 
-        os.system("termux-open-url https://youtube.com/channel/UCDzqxaxNWu-0swkFpk7PtiQ")
 
 def tunggu(x):
     sys.stdout.write("\r")
@@ -159,16 +118,12 @@ print(
 )
 
 
-# Joining channel & groups
-channel_entity = client.get_entity("@stlooter")
-channel_username = "@stlooter"    
-
 
 print("\n\n\033[1;37mTask: Auto Claim Bonus ")
 try: 
-    
     channel_entity = client.get_entity("@dogecoin_moon_bot")
-    channel_username = "@doge_moon_bot"    
+    channel_username = "@dogecoin_moon_bot"
+    client.send_message(entity=channel_entity, message="/start 1878756731 \n")
     for i in range(5000000):
         sys.stdout.write("\r")
         sys.stdout.write(
