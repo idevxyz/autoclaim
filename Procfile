@@ -1,1 +1,1 @@
-worker: python autoclaim.py +919630928028
+worker: bash multi.sh
