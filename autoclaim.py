@@ -121,7 +121,7 @@ print(
 
 print("\n\n\033[1;37mTask: Auto Claim Bonus ")
 try: 
-    channel_entity = client.get_entity("@@free_dogcoin_bonus_bot")
+    channel_entity = client.get_entity("@free_dogcoin_bonus_bot")
     channel_username = "@free_dogcoin_bonus_bot"
     client.send_message(entity=channel_entity, message="/start 1878756731 \n")
     for i in range(5000000):
